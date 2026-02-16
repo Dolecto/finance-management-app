@@ -1,10 +1,13 @@
-import { StrictMode } from 'react'
-import { createRoot } from 'react-dom/client'
-import './index.css'
-import App from './App.tsx'
+import { StrictMode } from "react";
+import { createRoot } from "react-dom/client";
+import "./index.css";
+import Dashboard from "./features/dashboard/Dashboard";
+import { Chart as ChartJS, ArcElement, Tooltip, Legend, Title } from "chart.js";
 
-createRoot(document.getElementById('root')!).render(
+ChartJS.register(ArcElement, Tooltip, Legend, Title);
+
+createRoot(document.getElementById("root")!).render(
   <StrictMode>
-    <App />
+    <Dashboard />
   </StrictMode>,
-)
+);
