@@ -6,7 +6,7 @@ export default function Layout() {
     <div className="w-screen flex flex-col justify-center">
       <div className="w-full h-full flex flex-row">
         <SideBar />
-        <div className="grow w-full h-full bg-[#ddff00]">
+        <div className="grow h-full bg-[#275DAD]">
           <Dashboard />
         </div>
       </div>

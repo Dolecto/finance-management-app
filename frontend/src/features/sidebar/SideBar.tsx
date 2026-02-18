@@ -6,7 +6,7 @@ import { FaFileAlt } from "react-icons/fa";
 
 export default function SideBar() {
   return (
-    <div className="w-[16vw] h-[70vh] bg-[#00ffaa]">
+    <div className="w-[16vw] bg-[#ABA9C3] shadow-[8px_0px_8px_#00000040] z-100">
       <SideBarItem icon={<FaHome />} text="Dashboard" />
       <SideBarItem icon={<FaPlus />} text="Add" />
       <SideBarItem icon={<FaEdit />} text="Edit" />
