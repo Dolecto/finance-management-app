@@ -1,5 +1,5 @@
-import Dashboard from "./features/dashboard/Dashboard";
-import SideBar from "./features/sidebar/SideBar";
+import SideBar from "./components/SideBar";
+import { Outlet } from "react-router-dom";
 
 export default function Layout() {
   return (
@@ -7,7 +7,7 @@ export default function Layout() {
       <div className="w-full h-full flex flex-row">
         <SideBar />
         <div className="grow h-full bg-[#275DAD]">
-          <Dashboard />
+          <Outlet />
         </div>
       </div>
     </div>
