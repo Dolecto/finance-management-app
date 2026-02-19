@@ -1,3 +1,4 @@
+import AddCard from "./components/AddCard";
 import SummaryCard from "./components/SummaryCard";
 
 export default function Dashboard() {
@@ -12,6 +13,7 @@ export default function Dashboard() {
           data: [1, 2, 3],
         }}
       />
+      <AddCard />
     </div>
   );
 }
