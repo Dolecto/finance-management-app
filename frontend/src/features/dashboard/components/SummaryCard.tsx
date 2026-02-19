@@ -35,6 +35,8 @@ export default function SummaryCard(props: SummaryCardProps) {
   };
 
   const chartOptions = {
+    responsive: true,
+    maintainAspectRatio: false,
     cutout: "65%",
     plugins: {
       legend: {
@@ -52,8 +54,7 @@ export default function SummaryCard(props: SummaryCardProps) {
 
   return (
     <div
-      className={`flex flex-col bg-white p-5 shadow-[4px_4px_8px_#00000040] text-black font-['Roboto'] rounded-lg`}
-      style={{ height: props.height ?? 400, width: props.width ?? 350 }}
+      className={`h-full w-full flex flex-col bg-white p-5 shadow-[4px_4px_8px_#00000040] text-black font-['Roboto'] rounded-lg`}
     >
       <div className="flex flex-col items-center flex-grow">
         <div className="flex flex-row justify-between items-center text-2xl w-full">
@@ -64,7 +65,7 @@ export default function SummaryCard(props: SummaryCardProps) {
         <div className="w-full text-[32px] overflow-hidden text-ellipsis">
           ₱{props.graphData.data.reduce((x, y) => x + y).toFixed(2)}
         </div>
-        <div className="h-[250px] flex justify-center">
+        <div className="flex w-full justify-center">
           {/* @ts-expect-error | Typescript complaining about some missing types, but adding it makes the code look overly complicated */}
           <Doughnut data={chartData} options={chartOptions} />
         </div>
