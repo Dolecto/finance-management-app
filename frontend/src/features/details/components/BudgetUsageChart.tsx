@@ -29,7 +29,7 @@ export default function BudgetUsageChart() {
   const chartRef = useRef<ChartJS<"bar">>(null);
   const [hiddenDatasets, setHiddenDatasets] = useState<Set<number>>(new Set());
   const [hiddenCategory, setHiddenCategory] = useState<number | null>(null);
-  const max = 50000;
+  const max = 20000;
   const categorySet = [...data.flatMap((data) => data.category)];
   const chartData = data;
   const [dataset, setDataset] = useState<ChartDataset<"bar", number[]>[]>([

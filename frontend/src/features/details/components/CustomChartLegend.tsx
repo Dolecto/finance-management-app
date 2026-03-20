@@ -17,20 +17,14 @@ export default function CustomChartLegend({
   size,
   category,
 }: CustomChartLegendProps) {
-  const markerSize =
-    size == "sm"
-      ? "h-[8px] w-[8px]"
-      : size == "lg"
-        ? "h-[20px] w-[20px]"
-        : "h-[20px] w-[20px]";
-  const textSize =
-    size == "sm" ? "text-[12px]" : size == "lg" ? "text-[18px]" : "text-[18px]";
+  const markerSize = size == "sm" ? 8 : size == "lg" ? 18 : 16;
+  const textSize = size == "sm" ? 12 : size == "lg" ? 18 : 16;
 
   return (
     <div
       className={
         category
-          ? "border-2 rounded-3xl px-2 py-1 flex flex-row flex-nowrap justify-center items-center gap-1  cursor-pointer"
+          ? "border-1 rounded-3xl px-2 py-1 flex flex-row flex-nowrap justify-center items-center gap-1  cursor-pointer"
           : "cursor-pointer"
       }
       onClick={onClick}
@@ -44,12 +38,21 @@ export default function CustomChartLegend({
         }}
       >
         <span
-          className={`${markerSize} rounded-2xl`}
+          className={`rounded-2xl`}
           style={{
+            height: `${markerSize}px`,
+            width: `${markerSize}px`,
             backgroundColor: color,
           }}
         />
-        <span className={`${textSize} text-black text-nowrap`}>{label}</span>
+        <span
+          className={`text-black text-nowrap`}
+          style={{
+            fontSize: `${textSize}px`,
+          }}
+        >
+          {label}
+        </span>
       </div>
       {category ? (
         <FaCaretLeft
