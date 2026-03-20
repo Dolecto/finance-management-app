@@ -44,6 +44,8 @@ export default function BudgetUsageChart() {
     },
   ]);
 
+  const remaining = dataset.find((item) => item.label === "Remaining")?.data;
+
   useEffect(() => {
     console.log("Dataset: ", dataset);
   }, [dataset]);
@@ -136,15 +138,20 @@ export default function BudgetUsageChart() {
   };
 
   return (
-    <div className="flex flex-col w-full items-center">
-      <div className="flex w-2/3 h-[100px] items-center justify-center">
-        <Bar
-          ref={chartRef}
-          data={{ labels: ["Test"], datasets: dataset }}
-          options={barOptions}
-        />
+    <div className="flex flex-col w-full items-start px-8">
+      <div className="w-full my-2">
+        <label className="flex w-full justify-end text-black">
+          {`$${remaining} left`}
+        </label>
+        <div className="flex w-full h-[50px] items-center justify-center">
+          <Bar
+            ref={chartRef}
+            data={{ labels: ["Test"], datasets: dataset }}
+            options={barOptions}
+          />
+        </div>
       </div>
-      <div className="flex flex-wrap gap-4 w-2/3 items-start">
+      <div className="flex flex-wrap gap-x-4 w-2/3 items-start">
         {chartData
           .flatMap((data) => data.category)
           .map((categoryData, index) => (
@@ -157,7 +164,7 @@ export default function BudgetUsageChart() {
             />
           ))}
       </div>
-      <div className="flex flex-wrap gap-4 w-2/3 items-center">
+      <div className="flex flex-wrap gap-x-4 w-2/3 items-center">
         {hiddenCategory !== null
           ? chartData[hiddenCategory].data.map((detailedData, index) => (
               <CustomChartLegend
