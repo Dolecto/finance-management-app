@@ -7,7 +7,7 @@ import SideBarItem from "./SideBarItem";
 export default function SideBar() {
   return (
     <div className="w-[16vw] bg-[#ABA9C3] shadow-[8px_0px_8px_#00000040] z-100">
-      <SideBarItem to="dashboard" icon={<FaHome />} text="Dashboard" />
+      <SideBarItem to="dashboard" icon={<FaHome />} text="Home" />
       <SideBarItem to="add" icon={<FaPlus />} text="Add" />
       <SideBarItem to="edit" icon={<FaEdit />} text="Edit" />
       <SideBarItem to="details" icon={<FaFileAlt />} text="Detailed View" />

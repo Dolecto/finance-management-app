@@ -331,23 +331,370 @@ const receipts = [
   },
 ];
 
-const maxValue = 10000;
+const hardwareReceipts = [
+  {
+    id: "RCP-20260319-00501",
+    store: {
+      name: "Handyman Hardware",
+      address: "National Hwy, Calamba, Laguna",
+      phone: "+63 49 123 9876",
+    },
+    date: "2026-03-19T09:15:00",
+    cashier: "Ramon Cruz",
+    items: [
+      {
+        id: 1,
+        name: "Flat Wall Paint 4L (White)",
+        category: "Paint & Supplies",
+        subcategory: "Wall Paint",
+        qty: 2,
+        price: 485.0,
+      },
+      {
+        id: 2,
+        name: "Paint Roller Set",
+        category: "Paint & Supplies",
+        subcategory: "Painting Tools",
+        qty: 1,
+        price: 135.0,
+      },
+      {
+        id: 3,
+        name: "Paint Brush 2in",
+        category: "Paint & Supplies",
+        subcategory: "Painting Tools",
+        qty: 3,
+        price: 45.0,
+      },
+      {
+        id: 4,
+        name: "Masking Tape 1in",
+        category: "Adhesives & Tapes",
+        subcategory: "Masking Tape",
+        qty: 4,
+        price: 35.0,
+      },
+      {
+        id: 5,
+        name: "Sandpaper 220 Grit (10pcs)",
+        category: "Abrasives",
+        subcategory: "Sandpaper",
+        qty: 2,
+        price: 75.0,
+      },
+      {
+        id: 6,
+        name: "Putty Knife 3in",
+        category: "Hand Tools",
+        subcategory: "Scraping Tools",
+        qty: 1,
+        price: 89.0,
+      },
+    ],
+    subtotal: 1594.0,
+    discount: 0.0,
+    total: 1594.0,
+    tendered: 1600.0,
+    change: 6.0,
+    payment: "Cash",
+  },
+  {
+    id: "RCP-20260318-00487",
+    store: {
+      name: "True Value Hardware",
+      address: "Brgy. Parian, Calamba, Laguna",
+      phone: "+63 49 456 7890",
+    },
+    date: "2026-03-18T14:30:00",
+    cashier: "Noel Bautista",
+    items: [
+      {
+        id: 1,
+        name: "PVC Pipe 1/2in x 6ft",
+        category: "Plumbing",
+        subcategory: "Pipes & Fittings",
+        qty: 6,
+        price: 65.0,
+      },
+      {
+        id: 2,
+        name: "PVC Elbow 1/2in",
+        category: "Plumbing",
+        subcategory: "Pipes & Fittings",
+        qty: 8,
+        price: 12.0,
+      },
+      {
+        id: 3,
+        name: "PVC Solvent Cement 200ml",
+        category: "Plumbing",
+        subcategory: "Sealants & Cement",
+        qty: 1,
+        price: 85.0,
+      },
+      {
+        id: 4,
+        name: "Teflon Tape",
+        category: "Plumbing",
+        subcategory: "Sealants & Cement",
+        qty: 3,
+        price: 18.0,
+      },
+      {
+        id: 5,
+        name: "Ball Valve 1/2in",
+        category: "Plumbing",
+        subcategory: "Valves & Controls",
+        qty: 2,
+        price: 145.0,
+      },
+      {
+        id: 6,
+        name: "Pipe Wrench 10in",
+        category: "Hand Tools",
+        subcategory: "Wrenches",
+        qty: 1,
+        price: 320.0,
+      },
+    ],
+    subtotal: 1100.0,
+    discount: 50.0,
+    total: 1050.0,
+    tendered: 1100.0,
+    change: 50.0,
+    payment: "Cash",
+  },
+  {
+    id: "RCP-20260317-00462",
+    store: {
+      name: "Wilcon Depot",
+      address: "Diversion Rd, Calamba, Laguna",
+      phone: "+63 49 789 0123",
+    },
+    date: "2026-03-17T11:00:00",
+    cashier: "Sheila Ramos",
+    items: [
+      {
+        id: 1,
+        name: "Circuit Breaker 20A",
+        category: "Electrical",
+        subcategory: "Circuit Breakers",
+        qty: 2,
+        price: 350.0,
+      },
+      {
+        id: 2,
+        name: "Electrical Wire 12AWG (10m)",
+        category: "Electrical",
+        subcategory: "Wires & Cables",
+        qty: 3,
+        price: 220.0,
+      },
+      {
+        id: 3,
+        name: "Outlet w/ Ground 3-gang",
+        category: "Electrical",
+        subcategory: "Outlets & Switches",
+        qty: 4,
+        price: 95.0,
+      },
+      {
+        id: 4,
+        name: "Junction Box 4x4",
+        category: "Electrical",
+        subcategory: "Boxes & Conduits",
+        qty: 5,
+        price: 45.0,
+      },
+      {
+        id: 5,
+        name: "Electrical Tape (3-pack)",
+        category: "Electrical",
+        subcategory: "Tapes & Accessories",
+        qty: 2,
+        price: 55.0,
+      },
+      {
+        id: 6,
+        name: "Voltage Tester Pen",
+        category: "Electrical",
+        subcategory: "Testing Tools",
+        qty: 1,
+        price: 189.0,
+      },
+    ],
+    subtotal: 2404.0,
+    discount: 100.0,
+    total: 2304.0,
+    tendered: 2400.0,
+    change: 96.0,
+    payment: "GCash",
+  },
+  {
+    id: "RCP-20260316-00441",
+    store: {
+      name: "Ace Hardware",
+      address: "SM City Calamba, Brgy. Real",
+      phone: "+63 49 321 6547",
+    },
+    date: "2026-03-16T16:45:00",
+    cashier: "Danilo Flores",
+    items: [
+      {
+        id: 1,
+        name: "Concrete Hollow Blocks (10pcs)",
+        category: "Construction Materials",
+        subcategory: "Blocks & Bricks",
+        qty: 1,
+        price: 450.0,
+      },
+      {
+        id: 2,
+        name: "Portland Cement 40kg",
+        category: "Construction Materials",
+        subcategory: "Cement & Mortar",
+        qty: 3,
+        price: 285.0,
+      },
+      {
+        id: 3,
+        name: "Steel Rebar 10mm x 6m",
+        category: "Construction Materials",
+        subcategory: "Steel & Metal",
+        qty: 5,
+        price: 320.0,
+      },
+      {
+        id: 4,
+        name: "Gravel 1/2cu (per bag)",
+        category: "Construction Materials",
+        subcategory: "Aggregates",
+        qty: 4,
+        price: 95.0,
+      },
+      {
+        id: 5,
+        name: "Mason's Trowel 10in",
+        category: "Hand Tools",
+        subcategory: "Masonry Tools",
+        qty: 2,
+        price: 115.0,
+      },
+      {
+        id: 6,
+        name: "Safety Helmet",
+        category: "Safety Equipment",
+        subcategory: "Head Protection",
+        qty: 2,
+        price: 250.0,
+      },
+    ],
+    subtotal: 3990.0,
+    discount: 200.0,
+    total: 3790.0,
+    tendered: 4000.0,
+    change: 210.0,
+    payment: "Cash",
+  },
+  {
+    id: "RCP-20260315-00418",
+    store: {
+      name: "Pacific Paint & Hardware",
+      address: "JP Rizal Ave, Calamba, Laguna",
+      phone: "+63 49 654 3210",
+    },
+    date: "2026-03-15T10:20:00",
+    cashier: "Gloria Tan",
+    items: [
+      {
+        id: 1,
+        name: "Hammer Claw 16oz",
+        category: "Hand Tools",
+        subcategory: "Hammers",
+        qty: 1,
+        price: 245.0,
+      },
+      {
+        id: 2,
+        name: "Screwdriver Set (6pcs)",
+        category: "Hand Tools",
+        subcategory: "Screwdrivers",
+        qty: 1,
+        price: 320.0,
+      },
+      {
+        id: 3,
+        name: "Measuring Tape 5m",
+        category: "Measuring Tools",
+        subcategory: "Tape Measures",
+        qty: 2,
+        price: 155.0,
+      },
+      {
+        id: 4,
+        name: "Wood Screw Assorted (100pcs)",
+        category: "Fasteners",
+        subcategory: "Screws",
+        qty: 2,
+        price: 85.0,
+      },
+      {
+        id: 5,
+        name: "Angle Grinder Disc (5pcs)",
+        category: "Power Tool Accessories",
+        subcategory: "Grinding Discs",
+        qty: 2,
+        price: 175.0,
+      },
+      {
+        id: 6,
+        name: "Work Gloves (pair)",
+        category: "Safety Equipment",
+        subcategory: "Hand Protection",
+        qty: 3,
+        price: 75.0,
+      },
+    ],
+    subtotal: 1545.0,
+    discount: 0.0,
+    total: 1545.0,
+    tendered: 1600.0,
+    change: 55.0,
+    payment: "Maya",
+  },
+];
+
+export interface SampleData {
+  category: {
+    label: string;
+    data: number[];
+    backgroundColor: string;
+  }[];
+  data: {
+    label: string;
+    data: number[];
+    backgroundColor: string;
+  }[];
+}
 
 export const sampleData = () => {
-  const getRandomColor = () => {
-    return `#${Math.floor(Math.random() * 0xffffff)
+  const getRandomColor = () =>
+    `#${Math.floor(Math.random() * 0xffffff)
       .toString(16)
       .padStart(6, "0")}`;
-  };
-  const getDetailedData = () => {
+
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  const compileReceipts = (sampleReceipts: any[], label: string) => {
     const categoryMap = new Map<string, number>();
 
-    receipts.forEach((receipt) => {
-      receipt.items.forEach((item) => {
-        const total = item.qty * item.price;
-        const existing = categoryMap.get(item.category) ?? 0;
-        categoryMap.set(item.category, existing + total);
-      });
+    sampleReceipts.forEach((receipt) => {
+      receipt.items.forEach(
+        (item: { qty: number; price: number; category: string }) => {
+          const total = item.qty * item.price;
+          const existing = categoryMap.get(item.category) ?? 0;
+          categoryMap.set(item.category, existing + total);
+        },
+      );
     });
 
     const data = Array.from(categoryMap.entries()).map(([category, total]) => ({
@@ -356,41 +703,31 @@ export const sampleData = () => {
       backgroundColor: getRandomColor(),
     }));
 
-    data.push({
-      label: "Free",
-      data: [maxValue - data.reduce((acc, value) => acc + value.data[0], 0)],
-      backgroundColor: "rgba(72, 72, 72, 0.5)",
-    });
+    const output = {
+      category: [
+        {
+          label: label,
+          data: [data.reduce((acc, value) => acc + value.data[0], 0)],
+          backgroundColor: getRandomColor(),
+        },
+      ],
+      data: data,
+    } as SampleData;
+
+    return output;
+  };
+
+  const getData = () => {
+    const data = [
+      compileReceipts(receipts, "Grocery"),
+      compileReceipts(hardwareReceipts, "Hardware"),
+    ];
 
     return data;
   };
 
-  const getSummarizedData = () => {
-    const data = receipts.reduce(
-      (accumulator, itemData) =>
-        accumulator +
-        itemData.items.reduce((acc, value) => acc + value.price * value.qty, 0),
-      0,
-    );
-    const item = [
-      {
-        label: "Grocery",
-        data: [data],
-        backgroundColor: getRandomColor(),
-      },
-      {
-        label: "Free",
-        data: [maxValue - data],
-        backgroundColor: "rgba(72, 72, 72, 0.5)",
-      },
-    ];
-    return item;
-  };
-
-  const detailedData = getDetailedData();
-  const summarizedData = getSummarizedData();
+  const data = getData();
   return {
-    detailedData,
-    summarizedData,
+    data,
   };
 };
