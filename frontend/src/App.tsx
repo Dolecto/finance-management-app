@@ -2,6 +2,7 @@ import { Routes, Route, Navigate } from "react-router-dom";
 import Layout from "./features/layout/Layout";
 import Dashboard from "./features/dashboard/Dashboard";
 import Details from "./features/details/Details";
+import Settings from "./features/settings/Settings";
 
 export default function App() {
   return (
@@ -12,6 +13,7 @@ export default function App() {
         <Route path="add" element={<Dashboard />} />
         <Route path="edit" element={<Dashboard />} />
         <Route path="details" element={<Details />} />
+        <Route path="settings" element={<Settings />} />
       </Route>
     </Routes>
   );
