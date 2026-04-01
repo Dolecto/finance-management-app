@@ -54,7 +54,7 @@ export default function SummaryCard(props: SummaryCardProps) {
 
   return (
     <div
-      className={`h-full w-full flex flex-col bg-white p-5 shadow-[4px_4px_8px_#00000040] text-black font-['Roboto'] rounded-lg`}
+      className={`h-full w-full flex flex-col bg-background p-5 shadow-[4px_4px_8px_#00000040] text-text font-['Roboto'] rounded-lg`}
     >
       <div className="flex flex-col items-center flex-grow">
         <div className="flex flex-row justify-between items-center text-2xl w-full">

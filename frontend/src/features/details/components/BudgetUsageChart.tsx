@@ -138,9 +138,9 @@ export default function BudgetUsageChart() {
   };
 
   return (
-    <div className="flex flex-col w-full items-start">
+    <div className="bg-background p-4 flex rounded-2xl flex-col w-full items-start">
       <div className="w-full my-2">
-        <label className="flex w-full justify-end text-black">
+        <label className="flex w-full justify-end text-text">
           {`$${remaining} left`}
         </label>
         <div className="flex w-full h-[50px] items-center justify-center">

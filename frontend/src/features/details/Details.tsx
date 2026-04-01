@@ -8,9 +8,9 @@ export default function Details() {
   const hardware = sampleData().data[1].category[0].data;
 
   return (
-    <div className="bg-white flex flex-col items-center justify-center w-full p-8">
+    <div className="flex flex-col items-center justify-center w-full p-4">
       <BudgetUsageChart />
-      <div className="w-full flex flex-row flex-wrap gap-2 ">
+      <div className="w-full flex flex-row flex-wrap gap-2 p-4">
         <SimpleDataDisplay
           containerStyles="w-[150px] h-[150px]"
           content={grocery[0]}

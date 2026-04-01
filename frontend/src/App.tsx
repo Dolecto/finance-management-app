@@ -1,7 +1,7 @@
-import { Routes, Route, Navigate } from "react-router-dom";
-import Layout from "./features/layout/Layout";
+import { Navigate, Route, Routes } from "react-router-dom";
 import Dashboard from "./features/dashboard/Dashboard";
 import Details from "./features/details/Details";
+import Layout from "./features/layout/Layout";
 import Settings from "./features/settings/Settings";
 
 export default function App() {

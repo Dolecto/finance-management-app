@@ -17,6 +17,12 @@
 
 @theme {
   --tw-shadow-color: rgba(0, 0, 0, 1);
+  --color-primary: #1c2f73;
+  --color-secondary: #e7decd;
+  --color-tertiary: #4b6858;
+  --color-background: #fbfaf8;
+  --color-text: #040711;
+  --color-error: #ef626c;
 }
 
 body {
