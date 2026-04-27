@@ -138,11 +138,16 @@ export default function BudgetUsageChart() {
   };
 
   return (
-    <div className="bg-background p-4 flex rounded-2xl flex-col w-full items-start">
+    <div className="bg-quaternary p-4 flex rounded-2xl flex-col w-full items-start">
       <div className="w-full my-2">
-        <label className="flex w-full justify-end text-text">
-          {`$${remaining} left`}
-        </label>
+        <div className="flex flex-row">
+          <label className="flex w-full justify-start text-denary">
+            Budget Allocation
+          </label>
+          <label className="flex w-full justify-end text-denary">
+            {`$${remaining} left`}
+          </label>
+        </div>
         <div className="flex w-full h-[50px] items-center justify-center">
           <Bar
             ref={chartRef}

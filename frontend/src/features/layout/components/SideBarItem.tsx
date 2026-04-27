@@ -11,11 +11,11 @@ export default function SideBarItem(props: SideBarItemProps) {
     <NavLink
       to={props.to}
       className={({ isActive }) =>
-        `flex flex-row items-center gap-2 bg-background m-2 p-2 rounded-lg shadow-[2px_4px_4px_#00000040] ${isActive ? "bg-[#FCF7F8] text-black" : "bg-[#5B616A]"}`
+        `flex flex-row items-center gap-2 m-2 p-2 rounded-lg shadow-[2px_4px_4px_#00000040]  text-white ${isActive ? "bg-primary" : "bg-tertiary"}`
       }
     >
       {props.icon}
-      <label className="text-text">{props.text}</label>
+      <label className="text-white">{props.text}</label>
     </NavLink>
   );
 }

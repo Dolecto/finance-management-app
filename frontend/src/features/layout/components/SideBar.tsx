@@ -9,7 +9,7 @@ import { useTheme } from "../../../common/theme/useTheme";
 
 export default function SideBar() {
   const theme = useTheme();
-  const iconColor = theme.theme.text;
+  const iconColor = theme.defaultTheme.text;
   return (
     <div className="w-[16vw] bg-secondary shadow-[8px_0px_8px_#00000040] z-100">
       <SideBarItem

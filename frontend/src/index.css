@@ -6,7 +6,7 @@
   font-weight: 400;
 
   color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
+  color: rgba(0, 0, 0, 1);
   background-color: #ffffff;
 
   font-synthesis: none;
@@ -17,12 +17,16 @@
 
 @theme {
   --tw-shadow-color: rgba(0, 0, 0, 1);
-  --color-primary: #1c2f73;
-  --color-secondary: #e7decd;
-  --color-tertiary: #4b6858;
-  --color-background: #fbfaf8;
-  --color-text: #040711;
-  --color-error: #ef626c;
+  --color-primary: #253031;
+  --color-secondary: #315659;
+  --color-tertiary: #2978a0;
+  --color-quaternary: #c6e0ff;
+  --color-quinary: #006616;
+  --color-senary: #000000;
+  --color-septenary: #000000;
+  --color-octonary: #000000;
+  --color-nonary: #000000;
+  --color-denary: #000000;
 }
 
 body {
