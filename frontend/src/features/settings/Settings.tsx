@@ -7,9 +7,11 @@ import SimpleColorPicker, { type Color } from "./components/SimpleColorPicker";
 import DEFlag from "../../common/components/DEFlag";
 import ENFlag from "../../common/components/ENFlag";
 import { SettingsContext } from "../../common/settings/SettingsContext";
+import { useTranslation } from "react-i18next";
 
 export default function Settings() {
   const context = useTheme();
+  const { t } = useTranslation();
   const { settings, updateSetting } = useContext(SettingsContext);
   const [color, setColor] = useState({ r: 50, g: 100, b: 150 });
   const [innerElementHover, setInnerElementHover] = useState(false);
@@ -63,12 +65,12 @@ export default function Settings() {
     <div
       className={`min-h-screen bg-primary transition-colors duration-500 p-6 md:p-10 font-sans`}
     >
-      <div className="max-w-3xl mx-auto space-y-6">
+      <div className="max-w-3xl">
         <div>
           <h1
-            className={`text-2xl font-semibold tracking-tight text-denary transition-colors duration-300`}
+            className={`text-2xl font-semibold tracking-tight text-denary transition-colors duration-300 m-2`}
           >
-            Settings
+            {t("settings")}
           </h1>
         </div>
         <div
@@ -161,25 +163,41 @@ export default function Settings() {
           <div className="p-6 space-y-4">
             <div className="flex items-center gap-3 flex-wrap">
               <label>Language:</label>
-              <DEFlag
-                width={50}
-                height={25}
-                onClick={() => {
-                  updateSetting("language", "de");
+              <div
+                className="rounded py-1"
+                style={{
+                  backgroundColor:
+                    settings.language === "de" ? context.theme.primary : "",
                 }}
-              />
-              <ENFlag
-                width={50}
-                height={25}
-                onClick={() => {
-                  updateSetting("language", "en");
+              >
+                <DEFlag
+                  width={50}
+                  height={25}
+                  onClick={() => {
+                    updateSetting("language", "de");
+                  }}
+                />
+              </div>
+              <div
+                className="rounded py-1"
+                style={{
+                  backgroundColor:
+                    settings.language === "en" ? context.theme.primary : "",
                 }}
-              />
+              >
+                <ENFlag
+                  width={50}
+                  height={25}
+                  onClick={() => {
+                    updateSetting("language", "en");
+                  }}
+                />
+              </div>
             </div>
           </div>
         </div>
         <button
-          className="bg-tertiary px-4 py-2 rounded-xl"
+          className="bg-tertiary px-4 py-2 rounded-xl m-2"
           onClick={handleSave}
         >
           Save

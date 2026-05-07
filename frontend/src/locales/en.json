@@ -1,0 +1,8 @@
+{
+  "welcome": "Welcome",
+  "settings": "Settings",
+  "save_button": "Save",
+  "errors": {
+    "not_found": "Page not found"
+  }
+}

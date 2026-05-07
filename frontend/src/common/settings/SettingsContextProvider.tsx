@@ -4,6 +4,7 @@ import {
   SettingsContext,
   type Settings,
 } from "./SettingsContext";
+import i18n from "../../i18n";
 
 interface SettingsProviderProps {
   children: ReactNode;
@@ -17,7 +18,7 @@ export function SettingsProvider({ children }: SettingsProviderProps) {
 
   useEffect(() => {
     localStorage.setItem("app-settings", JSON.stringify(settings));
-    console.log(JSON.stringify(settings));
+    i18n.changeLanguage(settings.language);
   }, [settings]);
 
   const updateSetting = <K extends keyof Settings>(

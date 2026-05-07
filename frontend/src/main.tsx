@@ -6,6 +6,7 @@ import { HashRouter } from "react-router-dom";
 import App from "./App";
 import { ThemeProvider } from "./common/theme/ThemeProvider";
 import { SettingsProvider } from "./common/settings/SettingsContextProvider";
+import "./i18n";
 
 ChartJS.register(ArcElement, Tooltip, Legend, Title);
 
