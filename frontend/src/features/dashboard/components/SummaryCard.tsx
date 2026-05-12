@@ -1,5 +1,6 @@
 import "@fontsource/roboto/500.css";
 import { Doughnut } from "react-chartjs-2";
+import { useTranslation } from "react-i18next";
 
 interface SummaryCardProps {
   title: string;
@@ -14,6 +15,8 @@ interface SummaryCardProps {
 }
 
 export default function SummaryCard(props: SummaryCardProps) {
+  const { t } = useTranslation();
+
   const getChartColors = (chartData: number[]) => {
     const chartColors: string[] = [];
     chartData.forEach((_, index) =>
@@ -61,7 +64,9 @@ export default function SummaryCard(props: SummaryCardProps) {
           {props.title}
           <button>test</button>
         </div>
-        <div className="w-full text-2xl text-black/50">Total</div>
+        <div className="w-full text-2xl text-black/50">
+          {t("information.total")}
+        </div>
         <div className="w-full text-[32px] overflow-hidden text-ellipsis">
           ₱{props.graphData.data.reduce((x, y) => x + y).toFixed(2)}
         </div>

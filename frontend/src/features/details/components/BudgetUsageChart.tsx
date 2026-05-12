@@ -14,6 +14,7 @@ import { useEffect, useRef, useState } from "react";
 import { Bar } from "react-chartjs-2";
 import { sampleData } from "../sampledata";
 import CustomChartLegend from "./CustomChartLegend";
+import { useTranslation } from "react-i18next";
 
 export default function BudgetUsageChart() {
   ChartJS.register(
@@ -25,6 +26,7 @@ export default function BudgetUsageChart() {
     Legend,
   );
   const { data } = sampleData();
+  const { t } = useTranslation();
 
   const chartRef = useRef<ChartJS<"bar">>(null);
   const [hiddenDatasets, setHiddenDatasets] = useState<Set<number>>(new Set());
@@ -142,10 +144,10 @@ export default function BudgetUsageChart() {
       <div className="w-full my-2">
         <div className="flex flex-row">
           <label className="flex w-full justify-start text-denary">
-            Budget Allocation
+            {t("information.budget_allocation")}
           </label>
           <label className="flex w-full justify-end text-denary">
-            {`$${remaining} left`}
+            {`$${remaining} ${t("information.remaining")}`}
           </label>
         </div>
         <div className="flex w-full h-[50px] items-center justify-center">

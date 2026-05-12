@@ -4,5 +4,17 @@
   "save_button": "Save",
   "errors": {
     "not_found": "Page not found"
+  },
+  "information": {
+    "total": "Total",
+    "budget_allocation": "Budget Allocation",
+    "remaining": "Remaining"
+  },
+  "nav": {
+    "home": "Home",
+    "add": "Add",
+    "edit": "Edit",
+    "detailed_view": "Detailed View",
+    "settings": "Settings"
   }
 }

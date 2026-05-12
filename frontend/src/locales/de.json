@@ -4,5 +4,17 @@
   "save_button": "Speichern",
   "errors": {
     "not_found": "Seite nicht gefunden"
+  },
+  "information": {
+    "total": "Gesamt",
+    "budget_allocation": "Budgetzuweisung",
+    "remaining": "Übrig"
+  },
+  "nav": {
+    "home": "Startseite",
+    "add": "Hinzufügen",
+    "edit": "Bearbeiten",
+    "detailed_view": "Detailansicht",
+    "settings": "Einstellungen"
   }
 }
