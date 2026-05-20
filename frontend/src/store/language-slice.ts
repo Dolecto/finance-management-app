@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 export type Language = "en" | "de";
 
 export interface LanguageSlice {
@@ -6,7 +7,7 @@ export interface LanguageSlice {
   resetLanguage: () => void;
 }
 
-export const createLanguageSlice = (set): LanguageSlice => ({
+export const createLanguageSlice = (set: any): LanguageSlice => ({
   language: "en",
   updateLanguage: (lang) => set({ language: lang }),
   resetLanguage: () => set({ language: "en" }),

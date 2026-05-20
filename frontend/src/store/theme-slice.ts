@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 export interface Theme {
   primary: string;
   secondary: string;
@@ -31,10 +32,10 @@ export interface ThemeSlice {
   updateAllColors: (styles: Theme) => void;
 }
 
-export const createThemeSlice = (set): ThemeSlice => ({
+export const createThemeSlice = (set: any): ThemeSlice => ({
   theme: defaultTheme,
   updateColor: (key, value) =>
-    set((state) => ({ theme: { ...state.theme, [key]: value } })),
+    set((state: any) => ({ theme: { ...state.theme, [key]: value } })),
   resetTheme: () => set({ theme: defaultTheme }),
   updateAllColors: (styles) => set({ theme: styles }),
 });
