@@ -5,8 +5,8 @@ import { FaFileAlt } from "react-icons/fa";
 import { FaGear } from "react-icons/fa6";
 
 import SideBarItem from "./SideBarItem";
-import { useTheme } from "../../../common/theme/useTheme";
 import { useTranslation } from "react-i18next";
+import { useTheme } from "../../../store/hooks/useTheme";
 
 export default function SideBar() {
   const theme = useTheme();
@@ -14,7 +14,7 @@ export default function SideBar() {
   const { t } = useTranslation();
 
   return (
-    <div className="w-[16vw] bg-secondary shadow-[8px_0px_8px_#00000040] z-100">
+    <div className="w-[20vw] bg-secondary shadow-[8px_0px_8px_#00000040] z-100">
       <SideBarItem
         to="dashboard"
         icon={<FaHome color={iconColor} />}

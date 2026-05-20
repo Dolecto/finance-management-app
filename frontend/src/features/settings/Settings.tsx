@@ -1,18 +1,18 @@
-import { useContext, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { Doughnut } from "react-chartjs-2";
-import type { Theme } from "../../common/theme/ThemeContext";
-import { useTheme } from "../../common/theme/useTheme";
-import ColorChangeLabel from "./components/ColorChangeLabel";
-import SimpleColorPicker, { type Color } from "./components/SimpleColorPicker";
+import { useTranslation } from "react-i18next";
 import DEFlag from "../../common/components/DEFlag";
 import ENFlag from "../../common/components/ENFlag";
-import { SettingsContext } from "../../common/settings/SettingsContext";
-import { useTranslation } from "react-i18next";
+import { useLanguage } from "../../store/hooks/useLanguage";
+import { useTheme } from "../../store/hooks/useTheme";
+import type { Theme } from "../../store/theme-slice";
+import ColorChangeLabel from "./components/ColorChangeLabel";
+import SimpleColorPicker, { type Color } from "./components/SimpleColorPicker";
 
 export default function Settings() {
   const context = useTheme();
   const { t } = useTranslation();
-  const { settings, updateSetting } = useContext(SettingsContext);
+  const { language, updateLanguage } = useLanguage();
   const [color, setColor] = useState({ r: 50, g: 100, b: 150 });
   const [innerElementHover, setInnerElementHover] = useState(false);
   const [focusedElement, setFocusedElement] = useState(["", ""]);
@@ -167,14 +167,14 @@ export default function Settings() {
                 className="rounded py-1"
                 style={{
                   backgroundColor:
-                    settings.language === "de" ? context.theme.primary : "",
+                    language === "de" ? context.theme.primary : "",
                 }}
               >
                 <DEFlag
                   width={50}
                   height={25}
                   onClick={() => {
-                    updateSetting("language", "de");
+                    updateLanguage("de");
                   }}
                 />
               </div>
@@ -182,14 +182,14 @@ export default function Settings() {
                 className="rounded py-1"
                 style={{
                   backgroundColor:
-                    settings.language === "en" ? context.theme.primary : "",
+                    language === "en" ? context.theme.primary : "",
                 }}
               >
                 <ENFlag
                   width={50}
                   height={25}
                   onClick={() => {
-                    updateSetting("language", "en");
+                    updateLanguage("en");
                   }}
                 />
               </div>
